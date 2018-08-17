@@ -2,7 +2,7 @@
 
 echo "Creating Lambda Function"
 
-aws lambda create-function --function-name image-resizer --region us-east-1 --runtime python3.7 --role arn:aws:iam::arn:aws:lambda:us-east-1:488599217855 --timeout 300 --memory-size 512 --handler lambda_function.lambda_handler --code S3Bucket="bckt-image",S3Key="code.zip",S3ObjectVersion="Latest Version"
+aws lambda create-function --function-name image-resizer --region us-east-1 --runtime python3.7 --role arn:aws:iam::488599217855:role/Lambda_EC2_fullaccess --timeout 300 --memory-size 512 --handler lambda_function.lambda_handler --code S3Bucket="bckt-image",S3Key="code.zip",S3ObjectVersion="Latest Version"
 
 
 echo "Getting ARN for the lambda function"
